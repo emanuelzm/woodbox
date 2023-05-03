@@ -24,6 +24,18 @@ code {
 }
 
 h1, h2, h3, h4, h5, h6 {
+    color: #111;
     font-family: 'Sigmar', cursive;
     font-weight: bold;
+}
+
+p {
+    color: #666;
+    text-align: justify;
+}
+
+main {
+    width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
 }
