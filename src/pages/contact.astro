@@ -8,9 +8,30 @@ import "../styles/contact.css";
     <main>
         <h1>Contact US</h1>
         <hr>
-        <ol>
-            <li><a href="https://www.instagram.com/woodbox_co/" rel="external nofollow noopener" target="_blank">Instagram</a></li>
-        </ol>
+        <ul>
+            <li><a href="https://www.instagram.com/woodbox_co/" rel="external nofollow noopener" target="_blank">Instagram</a></li>    
+        </ul>
+        <div>
+            <form method="POST" action="#" id="formContactV1">
+                <div>
+                    <label for="form_name">Nombre: </label>
+                    <input name="form_name" id="form_name" type="text" placeholder="Nombre completo" required/>
+                </div>
+                <div>
+                    <label for="form_name">Correo: </label>
+                    <input name="form_email" id="form_email" type="email" placeholder="Correo electronico" required/>
+                </div>
+                <div>
+                    <label for="form_message">Mensaje: </label>
+                    <textarea id="form_message" rows="4" name="form_message" placeholder="..." required ></textarea>
+                </div>
+                <div>
+                    <input type="reset" />
+                    <input type="submit" id="form_submit" value="Enviar">
+                </div>
+            </form>
+        </div>
     </main>
+    <script src="/assets/js/contact.js"></script>
     <Footer />
 </Layout>

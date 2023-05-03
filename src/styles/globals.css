@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Sigmar&display=swap');
 
 :root {
-    --first-color: red;
+    --blue-first: #094886;
+    --blue-second: #223DFF;
+    --blue-three: #0EC2C6;
     --accent: 124, 58, 237;
     --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
 }
