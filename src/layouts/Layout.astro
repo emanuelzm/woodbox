@@ -5,6 +5,10 @@ export interface Props {
 
 import "../styles/globals.css";
 const { title } = Astro.props;
+
+/* UIKIT */
+import "../components/uikit/css/uikit.min.css";
+import "../components/uikit/css/uikit-rtl.min.css";
 ---
 
 <!DOCTYPE html>
@@ -21,5 +25,8 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<slot />
+
+		<script src="../components/uikit/js/uikit.min.js"></script>
+		<script src="../components/uikit/js/uikit-icons.min.js"></script>
 	</body>
 </html>
