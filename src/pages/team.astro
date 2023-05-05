@@ -5,21 +5,20 @@ import Layout from '../layouts/Layout.astro';
 import "../styles/contact.css";
 ---
 
-<div id="cards-container">
-    <template id="card-template">
-      <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
-        <div class="uk-card-badge uk-label" data-role></div>
-        <h4 class="uk-card-title" data-title></h3>
-        <p data-name></p>
-      </div>
-    </template>
-</div>
-
 <Layout title="WoodBox: Team">
     <Header />
     <main>
         <h1>WoodBox Team</h1>
         <hr>
+        <div class="container" uk-grid id="cards-container">
+            <template id="card-template">
+              <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
+                <div class="uk-card-badge uk-label" data-role></div>
+                <h4 class="uk-card-title" data-title></h3>
+                <p data-name></p>
+              </div>
+            </template>
+        </div>
     </main>
     <Footer />
 
