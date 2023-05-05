@@ -11,34 +11,35 @@ import "../styles/contact.css";
         <h1>WoodBox Team</h1>
         <hr>
         <div class="container" uk-grid id="cards-container">
-            <template id="card-template">
-              <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
-                <div class="uk-card-badge uk-label" data-role></div>
-                <h4 class="uk-card-title" data-title></h3>
-                <p data-name></p>
-              </div>
-            </template>
+            <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
+                <div class="uk-card-badge uk-label">ROLE</div>
+                <h4 class="uk-card-title">Title</h3>
+            </div>
+            <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
+                <div class="uk-card-badge uk-label">ROLE</div>
+                <h4 class="uk-card-title">Title</h3>
+            </div>
+            <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
+                <div class="uk-card-badge uk-label">ROLE</div>
+                <h4 class="uk-card-title">Title</h3>
+            </div>
+            <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
+                <div class="uk-card-badge uk-label">ROLE</div>
+                <h4 class="uk-card-title">Title</h3>
+            </div>
+            <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
+                <div class="uk-card-badge uk-label">ROLE</div>
+                <h4 class="uk-card-title">Title</h3>
+            </div>
+            <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
+                <div class="uk-card-badge uk-label">ROLE</div>
+                <h4 class="uk-card-title">Title</h3>
+            </div>
+            <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
+                <div class="uk-card-badge uk-label">ROLE</div>
+                <h4 class="uk-card-title">Title</h3>
+            </div>
         </div>
     </main>
     <Footer />
-
-    <script>
-        const names = ["Juan", "Maria", "Luis", "Ana", "Pedro"];
-        const cardTemplate = document.getElementById("card-template")
-      
-        // Generar una tarjeta por cada nombre en la lista
-        names.forEach((name, index) => {
-          const card = cardTemplate.content.cloneNode(true)
-          const role = index % 2 === 0 ? "Developer" : "Designer"
-          const title = `Title ${index + 1}`
-      
-          // Llenar los datos de la tarjeta con los valores correspondientes
-          card.querySelector("[data-role]").textContent = role
-          card.querySelector("[data-title]").textContent = title
-          card.querySelector("[data-name]").textContent = `Name: ${name}`
-      
-          // Agregar la tarjeta al contenedor
-          document.getElementById("cards-container").appendChild(card)
-        })
-      </script>
 </Layout>
