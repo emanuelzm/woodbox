@@ -5,19 +5,41 @@ import Layout from '../layouts/Layout.astro';
 import "../styles/contact.css";
 ---
 
+<div id="cards-container">
+    <template id="card-template">
+      <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
+        <div class="uk-card-badge uk-label" data-role></div>
+        <h4 class="uk-card-title" data-title></h3>
+        <p data-name></p>
+      </div>
+    </template>
+</div>
+
 <Layout title="WoodBox: Team">
     <Header />
     <main>
         <h1>WoodBox Team</h1>
         <hr>
-        <ul>
-            <li>Ariana Ramos</li>
-            <li>Angie Sandoval</li>
-            <li>Celeste Rodriguez</li>
-            <li>Josefh Bernal</li>
-            <li>Santiago Molina</li>
-            <li>Emanuel Zabaleta</li>
-        </ul>
     </main>
     <Footer />
+
+    <script>
+        const names = ["Juan", "Maria", "Luis", "Ana", "Pedro"];
+        const cardTemplate = document.getElementById("card-template")
+      
+        // Generar una tarjeta por cada nombre en la lista
+        names.forEach((name, index) => {
+          const card = cardTemplate.content.cloneNode(true)
+          const role = index % 2 === 0 ? "Developer" : "Designer"
+          const title = `Title ${index + 1}`
+      
+          // Llenar los datos de la tarjeta con los valores correspondientes
+          card.querySelector("[data-role]").textContent = role
+          card.querySelector("[data-title]").textContent = title
+          card.querySelector("[data-name]").textContent = `Name: ${name}`
+      
+          // Agregar la tarjeta al contenedor
+          document.getElementById("cards-container").appendChild(card)
+        })
+      </script>
 </Layout>
