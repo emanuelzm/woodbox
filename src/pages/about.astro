@@ -1,0 +1,46 @@
+---
+import Header from '../components/header/Header.astro';
+import Footer from '../components/footer/Footer.astro';
+import Layout from '../layouts/Layout.astro';
+import "../styles/contact.css";
+
+const mision = "Promover un ambiente divertido y seguro donde cada uno de los clientes disfruten de las manualidades realizadas por nosotros mismos con excelente calidad y precios accesibles. Queremos que nuestros clientes guarden sus tesoros con estilo y funcionalidad. De tal forma que está sea la mejor opción y que las personas no duden en ir a su negocio.";
+const vision = "La visón de Woodbox es "ser el lugar y la forma de satisfacción de sus clientes", lo que obliga a nosotros como empresarios a dirigir esfuerzos y recursos para alcanzar grandes propósitos como marca.";
+const valores = "Responsabilidad, Respeto, Calidad, Cooperación, Escucha, Puntualidad";
+const Valores_deprecated = ["Responsabilidad", "Respeto", "Calidad", "Cooperación", "Escucha", "Puntualidad"];
+---
+
+<Layout title="WoodBox: Sobre nosotros">
+    <Header />
+    <main>
+        <div class="uk-align-center uk-border-rounded uk-card uk-card-default uk-card-body">
+            <h1>Mision, Vision y Valores de la empresa</h1>
+            <hr>
+            <div>
+                <div>
+                    <div class="uk-tile uk-tile-primary uk-padding-small">
+                        <p class="uk-h4">Mision</p>
+                    </div>
+                </div>
+                <p>${mision}</p>
+            </div>
+            <div>
+                <div>
+                    <div class="uk-tile uk-tile-primary uk-padding-small">
+                        <p class="uk-h4">Vision</p>
+                    </div>
+                </div>
+                <p>${vision}</p>
+            </div>
+            <div>
+                <div>
+                    <div class="uk-tile uk-tile-primary uk-padding-small">
+                        <p class="uk-h4">Valores</p>
+                    </div>
+                </div>
+                <p>${valores}</p>
+            </div>
+        </div>    
+    </main>
+    <Footer />
+</Layout>
