@@ -1,6 +1,7 @@
 var formContactV1 = document.getElementById("formContactV1");
 formContactV1.addEventListener("submit", formSubmit);
-
+var code = atob("ODc5ZWVlNDUtMGY2My00MzFjLTkxMjEtNTFjYjA0ZTFkYmY2");
+var fetch_code = "https://getform.io/f/" + code;
 function formSubmit(e) {
     e.preventDefault();
 
@@ -18,7 +19,7 @@ function formSubmit(e) {
         document.querySelector('textarea[name="form_message"]').value
     )
 
-    fetch("https://getform.io/f/GETAPI", {
+    fetch(fetch_code, {
             method: "POST",
             body: formData,
     })
