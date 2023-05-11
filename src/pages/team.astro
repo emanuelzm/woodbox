@@ -43,7 +43,7 @@ const team = [
         </div>
     </main>
     <Footer />
-    <script is:inline>
+    <script is:inline define:vars={{ team }}>
         team.forEach((person) => {
             const article = document.createRange().createContextualFragment(/*html*/ `
                 <div style="width: fit-content;" class="uk-border-rounded uk-tile uk-tile-primary uk-padding-small">
