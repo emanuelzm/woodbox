@@ -9,7 +9,7 @@ const phrase = "Guarda tus tesoros con estilo y funcionalidad, mientras añades 
 <Layout title="Woodbox">
 	<Header />
 	<main>
-		<div class="uk-margin uk-border-rounded uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="https://images.unsplash.com/photo-1490822180406-880c226c150b?fit=crop&w=650&h=433&q=80" uk-img>
+		<div class="uk-flex-column uk-margin uk-border-rounded uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="https://images.unsplash.com/photo-1490822180406-880c226c150b?fit=crop&w=650&h=433&q=80" uk-img>
 			<h1>WoodBox: Custom Works</h1>
 			<p>{phrase}</p>
 		</div>
@@ -53,9 +53,9 @@ const phrase = "Guarda tus tesoros con estilo y funcionalidad, mientras añades 
 				</div>
 			</div>
 		</div>	
-        <div class="uk-background-secondary uk-margin uk-box-shadow-medium uk-align-center uk-border-rounded uk-card uk-card-default uk-card-body uk-padding">
+        <div style="border: 1px solid #111;" class="uk-margin uk-box-shadow-medium uk-align-center uk-border-rounded uk-card uk-card-default uk-card-body uk-padding">
 			<h3>Our Newsletter</h3>
-			<form>
+			<form method="POST" action="#">
 				<label for="form_email">Danos tu correo: </label><input id="form_email" class="uk-input uk-form-blank uk-form-width-medium" type="email" placeholder="john.doe@gmail.com" required>
 				<div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
 					<label><input class="uk-checkbox" type="checkbox"> Acepto terminos y condiciones</label>
