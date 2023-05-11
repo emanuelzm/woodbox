@@ -38,7 +38,7 @@ const team = [
         <div class="uk-grid-divider uk-child-width-expand@s uk-background-default uk-box-shadow-small uk-border-rounded uk-card uk-padding">
             <h1>Equipo de WoodBox</h1>
             <hr>
-            <div uk-grid id="team_members">
+            <div class="uk-align uk-padding" id="team_members">
             </div>
         </div>
     </main>
@@ -46,7 +46,7 @@ const team = [
     <script is:inline define:vars={{ team }}>
         team.forEach((person) => {
             const article = document.createRange().createContextualFragment(/*html*/ `
-                <div style="width: fit-content;" class="uk-border-rounded uk-tile uk-tile-primary uk-padding-small">
+                <div style="width: fit-content;" class="uk-margin uk-border-rounded uk-tile uk-tile-primary uk-padding-small">
                     <p class="uk-h4">${person.name}</p>
                     <!-- <small>${person.profession}</small> -->
                 </div>
