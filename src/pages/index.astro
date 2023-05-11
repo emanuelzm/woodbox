@@ -40,7 +40,24 @@ const phrase = "Guarda tus tesoros con estilo y funcionalidad, mientras añades 
 				</div>
 			</div>
 		</div>
-		
+		<div style="border: 1px solid #111" class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+			<div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+				<img src="./assets/newsletter.jpg" alt="" uk-cover>
+				<canvas width="600" height="400"></canvas>
+			</div>
+			<div>
+				<div class="uk-card-body">
+					<h3 class="uk-card-title">Nuestro Newsletter:</h3>
+					<form method="POST" action="#">
+						<label for="form_email">Danos tu correo: </label><input id="form_email" style="border: 1px solid #111;" class="uk-input uk-form-blank uk-form-width-medium" type="email" placeholder="john.doe@gmail.com" required>
+						<div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+							<label><input class="uk-checkbox" type="checkbox"> Acepto terminos y condiciones</label>
+						</div>
+						<button class="uk-button uk-button-default">Suscribirme</button>
+					</form>
+				</div>
+			</div>
+		</div>		
 	</main>
 	<Footer />
 </Layout>
