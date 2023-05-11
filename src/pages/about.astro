@@ -5,7 +5,7 @@ import Layout from '../layouts/Layout.astro';
 import "../styles/contact.css";
 
 const mision = "Promover un ambiente divertido y seguro donde cada uno de los clientes disfruten de las manualidades realizadas por nosotros mismos con excelente calidad y precios accesibles. Queremos que nuestros clientes guarden sus tesoros con estilo y funcionalidad. De tal forma que está sea la mejor opción y que las personas no duden en ir a su negocio.";
-const vision = "La visón de Woodbox es "ser el lugar y la forma de satisfacción de sus clientes", lo que obliga a nosotros como empresarios a dirigir esfuerzos y recursos para alcanzar grandes propósitos como marca.";
+const vision = 'La visón de Woodbox es "ser el lugar y la forma de satisfacción de sus clientes", lo que obliga a nosotros como empresarios a dirigir esfuerzos y recursos para alcanzar grandes propósitos como marca.';
 const valores = "Responsabilidad, Respeto, Calidad, Cooperación, Escucha, Puntualidad";
 const Valores_deprecated = ["Responsabilidad", "Respeto", "Calidad", "Cooperación", "Escucha", "Puntualidad"];
 ---
@@ -22,7 +22,7 @@ const Valores_deprecated = ["Responsabilidad", "Respeto", "Calidad", "Cooperaci�
                         <p class="uk-h4">Mision</p>
                     </div>
                 </div>
-                <p>${mision}</p>
+                <p>{mision}</p>
             </div>
             <div>
                 <div>
@@ -30,7 +30,7 @@ const Valores_deprecated = ["Responsabilidad", "Respeto", "Calidad", "Cooperaci�
                         <p class="uk-h4">Vision</p>
                     </div>
                 </div>
-                <p>${vision}</p>
+                <p>{vision}</p>
             </div>
             <div>
                 <div>
@@ -38,7 +38,17 @@ const Valores_deprecated = ["Responsabilidad", "Respeto", "Calidad", "Cooperaci�
                         <p class="uk-h4">Valores</p>
                     </div>
                 </div>
-                <p>${valores}</p>
+                <p>{valores}</p>
+                <p style="display: none;">
+                    <ul id="parent_values">
+                        {Valores_deprecated.forEach(valor => {
+                            const parent_values = document.getElementById("parent_values");
+                            let item = document.createElement("li");
+                            item.textContent = valor;
+                            parent_values.appendChild(item);
+                        })}
+                    </ul>
+                </p>
             </div>
         </div>    
     </main>
