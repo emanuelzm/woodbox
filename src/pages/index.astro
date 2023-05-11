@@ -2,6 +2,8 @@
 import Header from '../components/header/Header.astro';
 import Footer from '../components/footer/Footer.astro';
 import Layout from '../layouts/Layout.astro';
+
+const phrase = "Guarda tus tesoros con estilo y funcionalidad, mientras añades un toque de encanto.";
 ---
 
 <Layout title="Woodbox">
@@ -9,6 +11,57 @@ import Layout from '../layouts/Layout.astro';
 	<main>
 		<div class="uk-margin uk-border-rounded uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="https://images.unsplash.com/photo-1490822180406-880c226c150b?fit=crop&w=650&h=433&q=80" uk-img>
 			<h1>WoodBox: Custom Works</h1>
+			<p>{phrase}</p>
+		</div>
+		<div class="uk-margin">
+			<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+				<div class="uk-card-media-left uk-cover-container">
+					<img src="images/light.jpg" alt="" uk-cover>
+					<canvas width="600" height="400"></canvas>
+				</div>
+				<div>
+					<div class="uk-card-body">
+						<h3 class="uk-card-title">Media Left</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+				<div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+					<img src="images/light.jpg" alt="" uk-cover>
+					<canvas width="600" height="400"></canvas>
+				</div>
+				<div>
+					<div class="uk-card-body">
+						<h3 class="uk-card-title">Media Right</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+				<div class="uk-card-media-left uk-cover-container">
+					<img src="images/light.jpg" alt="" uk-cover>
+					<canvas width="600" height="400"></canvas>
+				</div>
+				<div>
+					<div class="uk-card-body">
+						<h3 class="uk-card-title">Media Left</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+					</div>
+				</div>
+			</div>
+		</div>	
+        <div class="uk-background-secondary uk-margin uk-box-shadow-medium uk-align-center uk-border-rounded uk-card uk-card-default uk-card-body uk-padding">
+			<h3>Our Newsletter</h3>
+			<form>
+				<label for="form_email">Danos tu correo: </label><input id="form_email" class="uk-input uk-form-blank uk-form-width-medium" type="email" placeholder="john.doe@gmail.com" required>
+				<div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+					<label><input class="uk-checkbox" type="checkbox"> Acepto terminos y condiciones</label>
+				</div>
+				<button class="uk-button uk-button-default">Suscribirme</button>
+			</form>
 		</div>
 	</main>
 	<Footer />
