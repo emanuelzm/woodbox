@@ -1,11 +1,12 @@
 ---
 export interface Props {
 	title: string;
+	description: string;
 }
 
 import Seo from '../components/seo/Seo.astro';
 import "../styles/globals.css";
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 
 /* UIKIT */
 import "../components/uikit/css/uikit.min.css";
@@ -23,7 +24,17 @@ import "../components/uikit/css/uikit-rtl.min.css";
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Sigmar&display=swap" rel="stylesheet">
 		
-		<Seo />
+		<Seo title={title} description={description} />
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-30M3SYSKM2"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-30M3SYSKM2');
+		</script>
 
 		<title>{title}</title>
 	</head>

@@ -1,9 +1,13 @@
 ---
 export interface Props {
+	title: string;
+	description: string;
 }
-//const { } = Astro.props;
-const name = "WoodBox";
-const phrase = "Guarda tus tesoros con estilo y funcionalidad, mientras añades un toque de encanto.";
+
+const { title, description } = Astro.props;
+
+const name = title || "WoodBox";
+const phrase = description || "Guarda tus tesoros con estilo y funcionalidad, mientras añades un toque de encanto.";
 const social_name = "woodboxes";
 const base_url = "https://www.woodboxes.co";
 const beauty_base_url = "woodboxes.co";
