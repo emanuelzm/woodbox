@@ -4,6 +4,7 @@ import Footer from '../components/footer/Footer.astro';
 import Layout from '../layouts/Layout.astro';
 
 const phrase = "Guarda tus tesoros con estilo y funcionalidad, mientras añades un toque de encanto.";
+const base_url = "https://www.woodboxes.co";
 ---
 
 <Layout title="Woodbox">
@@ -16,8 +17,7 @@ const phrase = "Guarda tus tesoros con estilo y funcionalidad, mientras añades 
 		<div class="uk-margin">
 			<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
 				<div class="uk-card-media-left uk-cover-container">
-					<img src="images/light.jpg" alt="" uk-cover>
-					<canvas width="600" height="400"></canvas>
+					<img src="images/light.jpg" alt="">
 				</div>
 				<div>
 					<div class="uk-card-body">
@@ -26,11 +26,57 @@ const phrase = "Guarda tus tesoros con estilo y funcionalidad, mientras añades 
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="uk-margin">
+			<div class="uk-slider-container-offset" uk-slider>
 
+				<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+			
+					<ul class="uk-slider-items uk-child-width-1-2@s uk-grid">
+						<li>
+							<div class="uk-card uk-card-default">
+								<div class="uk-card-media-top">
+									<img src="images/photo.jpg" width="1800" height="1200" alt="">
+								</div>
+								<div class="uk-card-body">
+									<h3 class="uk-card-title">Headline</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="uk-card uk-card-default">
+								<div class="uk-card-media-top">
+									<img src="images/dark.jpg" width="1800" height="1200" alt="">
+								</div>
+								<div class="uk-card-body">
+									<h3 class="uk-card-title">Headline</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="uk-card uk-card-default">
+								<div class="uk-card-body">
+									<h3 class="uk-card-title"><a href=`${base_url}/products`>Mirar más</a></h3>
+								</div>
+							</div>
+						</li>
+					</ul>
+			
+					<a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+					<a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+			
+				</div>
+			
+				<ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+			
+			</div>
+		</div>
+		<div class="uk-margin">
 			<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
 				<div class="uk-card-media-left uk-cover-container">
-					<img src="images/light.jpg" alt="" uk-cover>
-					<canvas width="600" height="400"></canvas>
+					<img src="images/light.jpg" alt="">
 				</div>
 				<div>
 					<div class="uk-card-body">
@@ -42,8 +88,7 @@ const phrase = "Guarda tus tesoros con estilo y funcionalidad, mientras añades 
 		</div>
 		<div style="border: 1px solid #111" class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
 			<div class="uk-flex-last@s uk-card-media-right uk-cover-container">
-				<img src="./assets/newsletter.jpg" alt="" uk-cover>
-				<canvas width="600" height="400"></canvas>
+				<img src="./assets/newsletter.jpg" alt="Newsletter WoodBox">
 			</div>
 			<div>
 				<div class="uk-card-body">
