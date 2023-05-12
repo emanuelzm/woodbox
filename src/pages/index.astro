@@ -12,8 +12,8 @@ const base_url = "https://www.woodboxes.co";
 	description=`Woodbox: ${phrase}`
 >
 
-	<Header />
 	<main>
+		<Header />
 		<div class="uk-flex-column uk-margin uk-border-rounded uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="https://images.unsplash.com/photo-1490822180406-880c226c150b?fit=crop&w=650&h=433&q=80" uk-img>
 			<h1>WoodBox: Custom Works</h1>
 			<p>{phrase}</p>
@@ -110,7 +110,7 @@ const base_url = "https://www.woodboxes.co";
 			<div>
 				<div class="uk-card-body">
 					<h3 class="uk-card-title">Nuestro Newsletter:</h3>
-					<form method="POST" action="#">
+					<form method="POST" action="#" id="formV1">
 						<label for="form_email">Danos tu correo: </label><input id="form_email" style="border: 1px solid #111;" class="uk-input uk-form-blank uk-form-width-medium" type="email" placeholder="john.doe@gmail.com" required>
 						<div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
 							<label><input class="uk-checkbox" type="checkbox"> Acepto terminos y condiciones</label>
@@ -121,5 +121,6 @@ const base_url = "https://www.woodboxes.co";
 			</div>
 		</div>		
 	</main>
+	<script src="/assets/js/newsletter.js" is:inline></script>
 	<Footer />
 </Layout>
