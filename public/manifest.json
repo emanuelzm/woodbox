@@ -1,0 +1,35 @@
+{
+    "name": "WoodBox: Custom Works",
+    "short_name": "WoodBox",
+    "description": "WoodBox: Guarda tus tesoros con estilo y funcionalidad, mientras añades un toque de encanto.",
+    "start_url": "/",
+    "id": "/",
+    "display": "standalone",
+    "orientation": "any",
+    "theme_color": "#ff6f61",
+    "background_color": "#fff",
+    "version": "1",
+    "icons": [
+        {
+            "src": "./assets/brand/ico/isotipo16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        }, {
+            "src": "./assets/brand/ico/isotipo32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        }, {
+            "src": "./assets/brand/ico/isotipo180.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }, {
+            "src": "./assets/brand/ico/isotipo192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }, {
+            "src": "./assets/brand/ico/isotipo512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

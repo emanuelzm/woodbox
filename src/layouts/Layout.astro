@@ -3,6 +3,7 @@ export interface Props {
 	title: string;
 }
 
+import Seo from '../components/seo/Seo.astro';
 import "../styles/globals.css";
 const { title } = Astro.props;
 
@@ -22,6 +23,8 @@ import "../components/uikit/css/uikit-rtl.min.css";
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Sigmar&display=swap" rel="stylesheet">
 		
+		<Seo />
+
 		<title>{title}</title>
 	</head>
 	<body>
