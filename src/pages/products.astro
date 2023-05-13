@@ -1,0 +1,106 @@
+---
+import Header from '../components/header/Header.astro';
+import Footer from '../components/footer/Footer.astro';
+import Layout from '../layouts/Layout.astro';
+import "../styles/contact.css";
+
+const products = [
+    {
+        name: "",
+        description: "",
+        images: [],
+        link: "",
+        promotion: []
+    },
+    {
+        name: "",
+        description: "",
+        images: [],
+        link: "",
+        promotion: []
+    },
+    {
+        name: "",
+        description: "",
+        images: [],
+        link: "",
+        promotion: []
+    },
+    {
+        name: "",
+        description: "",
+        images: [],
+        link: "",
+        promotion: []
+    },
+    {
+        name: "",
+        description: "",
+        images: [],
+        link: "",
+        promotion: []
+    },
+    {
+        name: "",
+        description: "",
+        images: [],
+        link: "",
+        promotion: []
+    },
+];
+---
+
+<Layout 
+    title="WoodBox: Sobre nosotros" 
+    description=""
+>
+    <Header />
+    <main>
+        <div style="max-width: 1000px; margin: 0 auto;" class="uk-align-center uk-border-rounded uk-card uk-card-default uk-card-body">
+            <h1>Productos de la empresa</h1>
+            <hr>
+            <div class="uk-child-width-1-3@m" uk-grid id="products">
+            </div>
+        </div>    
+    </main>
+    <Footer />
+    <script is:inline define:vars={{ products }}>
+        products.forEach((product) => {
+            const article = document.createRange().createContextualFragment(/*html*/ `
+                <div>
+                    <div style="border: 1px solid #111;" class="uk-border-rounded uk-card uk-card-default">
+                        <div style="border-bottom: 1px solid #111;" class="uk-card-media-top">
+                            <div style="width: fit-content;" class="uk-card-badge uk-label">Badge</div>
+                            <div style="width: fit-content;" class="uk-card-badge uk-label">Badge</div>
+                            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
+
+                                <ul class="uk-slideshow-items">
+                                    <li>
+                                        <img style="height: 100%; width: 100%; object-fit: cover;" src="https://www.pexels.com/photo/15286/download/" alt="">
+                                    </li>
+                                    <li>
+                                        <img style="height: 100%; width: 100%; object-fit: cover;" src="https://www.radiofrance.fr/s3/cruiser-production/2021/11/583b3917-c531-4786-8170-9ce8b1d1a81a/1200x680_gettyimages-1265067608.jpg" alt="">
+                                    </li>
+                                    <li>
+                                        <img style="height: 100%; width: 100%; object-fit: cover;" src="https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/Zugpsitze_mountain.jpg?crop=0%2C214%2C3008%2C1579&wid=1200&hei=630&scl=2.506666666666667" alt="">
+                                    </li>
+                                </ul>
+                            
+                                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                            
+                            </div>
+                        </div>
+                        <div style="position: relative;" class="uk-card-body">
+                            <h3 class="uk-card-title">Media Top</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                            <a style="position: absolute; left: 0; right: 0; bottom: 0; top: 0;" href="#"></a>
+                            <span>Visit &gt</span>
+                        </div>
+                    </div>
+                </div>
+            `);
+            const team_members = document.getElementById("products").append(article);
+        });
+    </script>
+</Layout>
