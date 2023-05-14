@@ -1,0 +1,87 @@
+---
+export interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+
+const name = title || "WoodBox";
+const phrase = description || "Guarda tus tesoros con estilo y funcionalidad, mientras añades un toque de encanto.";
+const social_name = "woodboxes";
+const base_url = "https://www.woodboxes.co";
+const beauty_base_url = "woodboxes.co";
+---
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="robots" content="NOODP">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ff6f61">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#027381">
+<meta name="color-scheme" content="light dark">
+<meta name="msapplication-TileColor" content="#ff6f61" />
+<meta name="apple-mobile-web-app-status-bar-style" content="#ff6f61">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<link rel="manifest" href="./manifest.json" />
+<link rel="canonical" href={base_url}>
+<link rel="alternate" hreflang="x-default" href={base_url}>
+<link rel="alternate" hreflang="es" href={base_url}>
+<meta name="title" content="Corala">
+<meta name="apple-mobile-web-app-title" content={name}>
+<meta name="application-name" content={name}>
+<meta name="description" content=`${name}: ${phrase}`>
+
+<!-- Brand Isologo -->
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="./assets/brand/ico/isotipo180.png">
+<link rel="shortcut icon" type="image/png" sizes="192x192" href="./assets/brand/ico/isotipo192.png">
+
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/brand/ico/isotipo16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/brand/ico/isotipo32.png">
+<link rel="icon" type="image/png" sizes="180x180" href="./assets/brand/ico/isotipo180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="./assets/brand/ico/isotipo192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="./assets/brand/ico/isotipo512.png">
+
+<!-- Preconnect -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- SEO -->
+<meta property="og:title" content={name}>
+<meta property="og:description" content=`${name}: ${phrase}`>
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:url" content={base_url}>
+<meta property="og:image" content="./assets/images/brand/CoralaApp.webp">
+<meta property="og:site_name" content={beauty_base_url}>
+
+<script type="application/ld+json">
+  [
+    {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement":
+        [{
+          "@type": "ListItem",
+          "position": 1,
+          "item":
+            {
+              "@id": "https://www.woodboxes.co/",
+              "name": "WoodBox: Guarda tus tesoros con estilo y funcionalidad, mientras añades un toque de encanto.",
+            }
+        }]
+    }
+  ]
+</script>
+
+<!-- DNS -->
+<link rel="dns-prefetch" href="//www.google.com">
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+
+<!-- <meta property="twitter:account_id" content=""> -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content=`@${social_name}`>
+<meta name="twitter:title" content=`${name}: Custom Works`>
+<meta name="twitter:description" content=`${name}: ${phrase}`>
+<meta name="twitter:creator" content=`@${social_name}`>
+<meta name="twitter:image" content="./assets/brand/logo.jpg">
+<meta name="twitter:domain" content={base_url}>

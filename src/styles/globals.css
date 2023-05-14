@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Sigmar&display=swap');
+
+:root {
+    --blue-first: #094886;
+    --blue-second: #223DFF;
+    --blue-three: #0EC2C6;
+    --accent: 124, 58, 237;
+    --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+}
+
+body {
+    scroll-behavior: smooth;
+    background-color: #F6F6F6;
+    font-family: 'Quicksand', sans-serif;
+}
+
+code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+        Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #111;
+    font-family: 'Sigmar', cursive;
+    font-weight: bold;
+}
+
+p {
+    color: #666;
+    text-align: justify;
+}
+
+main {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}

@@ -1,0 +1,49 @@
+---
+import Header from '../components/header/Header.astro';
+import Footer from '../components/footer/Footer.astro';
+import Layout from '../layouts/Layout.astro';
+import "../styles/contact.css";
+---
+
+<Layout 
+    title="WoodBox: Contactanos" 
+    description=""
+>
+    <Header />
+    <main>
+        <div class="uk-alert-primary" uk-alert>
+            <p>
+                Siguenos en Instagram para màs contenido relacionado como:
+                <a href="https://www.instagram.com/woodbox_co/" class="uk-link-muted" rel="external nofollow noopener" target="_blank">
+                    @WoodBox_co 
+                </a> 
+                <img src="https://img.icons8.com/ios-glyphs/30/null/instagram-new.png" />
+            </p>
+        </div>
+        <div class="uk-align-center uk-border-rounded uk-card uk-card-default uk-card-body">
+            <form method="POST" class="uk-form-horizontal" action="#" id="formContactV1">
+                <legend class="uk-legend">Contactanos</legend>
+                <div class="uk-margin">
+                    <input class="uk-input" id="form_name" name="form_name" type="text" placeholder="John Doe" aria-label="Name" required>
+                </div>
+                <div class="uk-margin">
+                    <input class="uk-input" type="email" name="form_email" id="form_email" placeholder="john.does@gmail.com" aria-label="Email" required>
+                </div>
+                <div class="uk-margin">
+                    <textarea class="uk-textarea" name="form_message" rows="5" id="form_message" placeholder="Mensaje" aria-label="Mensaje" required></textarea>
+                </div>
+                <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                    <label>
+                        <input class="uk-checkbox" type="checkbox" required>
+                        <small>Autorizo el tratamiento de mis datos personales</small>
+                    </label>
+                </div>
+                <div class="uk-margin">
+                    <button class="uk-button uk-border-rounded uk-button-primary" type="submit" id="form_submit" value="Enviar">Enviar</button>
+                </div>
+            </form>
+        </div>    
+    </main>
+    <script src="/assets/js/contact.js" is:inline></script>
+    <Footer />
+</Layout>

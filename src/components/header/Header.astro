@@ -1,0 +1,41 @@
+---
+export interface Props {
+}
+//const { } = Astro.props;
+const base_url = "https://www.woodboxes.co";
+---
+
+  <nav class="uk-navbar-container">
+    <div class="" style="max-width: 1000px; margin: 0 auto;">
+        <div uk-navbar class="uk-margin-top uk-border-rounded uk-light uk-padding uk-background-secondary uk-box-shadow-small" style="height: 100px;">
+
+            <div class="uk-navbar-left">
+                <a class="uk-active" href=`${base_url}/`>
+                    <img style="filter: invert(1);" width="30px" height="30px" src="./assets/brand/favicon.ico" alt="WoodBox Logo" />
+                    <strong>WoodBox</strong>
+                </a>
+            </div>
+
+            <div class="uk-navbar-right" style="flex-wrap: nowrap;">
+
+                <ul class="uk-navbar-nav">
+                    <li><a href=`${base_url}/`>Inicio</a></li>
+                    <li>
+                        <a href="#">Nosotros</a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li><a href=`${base_url}/team`>Equipo</a></li>
+                                <li><a href=`${base_url}/about`>Acerca de Nosotros</a></li>
+                                <li><a href=`${base_url}/terms`>Terminos y Condiciones</a></li>
+                                <li><a href=`${base_url}/privacy-policy`>Política de Privacidad</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href=`${base_url}/contact`>Contacto</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+  </nav>
