@@ -6,46 +6,32 @@ import "../styles/contact.css";
 
 const products = [
     {
-        name: "",
-        description: "",
+        name: "WoodBox Small Nature",
+        description: "Es una caja personalizada tematizada sobre la naturaleza.",
         images: ["https://t4.ftcdn.net/jpg/05/47/74/67/360_F_547746791_AaOMo0yf5FNpns8PZ09Idmvo9KKIHqr4.webp", "https://t4.ftcdn.net/jpg/02/91/24/27/360_F_291242770_z3XC7rJB1Mvc5jVMsEY9Dx2xMrX4sxUi.jpg"],
-        link: "",
+        link: "woodbox-small-nature",
         promotion: null
     },
     {
-        name: "",
-        description: "",
+        name: "WoodBox Medium Nature",
+        description: "En un tamaño medio incluye la escencia de la flora y fauna de la Naturaleza.",
         images: ["https://t4.ftcdn.net/jpg/05/47/74/67/360_F_547746791_AaOMo0yf5FNpns8PZ09Idmvo9KKIHqr4.webp"],
-        link: "",
-        promotion: "50%"
+        link: "woodbox-medium-nature",
+        promotion: "POPULAR"
     },
     {
-        name: "",
-        description: "",
+        name: "WoodBox Big Nature",
+        description: "En una caja grande podras encontrar un diseño especial con tematica del oceano.",
         images: [],
-        link: "",
+        link: "woodbox-big-nature",
         promotion: null
     },
     {
-        name: "",
-        description: "",
+        name: "WoodBox: Custom work",
+        description: "En una caja personalizada, tu podras diseñar la tematica de la caja.",
         images: [],
-        link: "",
-        promotion: null
-    },
-    {
-        name: "",
-        description: "",
-        images: [],
-        link: "",
-        promotion: null
-    },
-    {
-        name: "",
-        description: "",
-        images: [],
-        link: "",
-        promotion: "20%"
+        link: "woodbox-custom",
+        promotion: "10%"
     },
 ];
 ---
@@ -73,7 +59,7 @@ const products = [
                             ${ product.promotion ? `<div style='background: #FBCD17; width: fit-content;' class='uk-card-badge uk-label'> ${product.promotion || ""} </div>` : "" }
                             ${ product.images.length <= 1 ?
                                 `<div style="display: ${product.images.length <= 1 ? "block" : "none" }" class="uk-position-relative uk-light">
-                                    <img src="${product.images[0] || "./assets/brand/logo.jpg"}" style="width: 100%; height: 100%; object-fit: cover;" alt="">
+                                    <img src="${product.images[0] || "./assets/brand/logo.jpg"}" style="border-radius: 20px; width: 100%; height: 100%; object-fit: cover;" alt="">
                                 </div>`: ""
                             }
                             ${ product.images.length > 1 ?
