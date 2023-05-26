@@ -71,7 +71,7 @@ const products = [
                     <div style="border: 1px solid #111;" class="uk-border-rounded uk-card uk-card-default">
                         <div style="border-bottom: 1px solid #111;" class="uk-card-media-top">
                             ${ product.promotion ? `<div style='background: #FBCD17; width: fit-content;' class='uk-card-badge uk-label'> ${product.promotion || ""} </div>` : "" }
-                            ${ product.images ?
+                            ${ product.images > 1 ?
                                 `<div style="display: ${product.images.length >= 2 ? "block" : "none" }" class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow uk-slider="finite: false, set: false;">
 
                                     <ul class="uk-slideshow-items">
@@ -88,7 +88,7 @@ const products = [
                                 
                                 </div>` :
                                 `<div style="display: ${product.images.length = 1 ? "block" : "none" }" class="uk-position-relative uk-light">
-                                    <img src="${image}" alt="">
+                                    <img src="${image[0]}" alt="">
                                 </div>`
                             }
                         </div>
