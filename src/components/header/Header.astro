@@ -1,9 +1,9 @@
 ---
+import brand from '../../api/brand.json';
 export interface Props {
 }
 //const { } = Astro.props;
-//const base_url = "https://www.woodboxes.co";
-const base_url = ".";
+const base_url = brand[0].base_url;
 ---
 
   <nav class="uk-navbar-container">
@@ -11,7 +11,7 @@ const base_url = ".";
         <div uk-navbar class="uk-border-rounded uk-light uk-padding uk-background-secondary uk-box-shadow-small" style="height: 100px;">
 
             <div class="uk-navbar-left">
-                <a class="uk-active" href=`${base_url}/`>
+                <a class="uk-active uk-flex-inline uk-flex-middle" style="gap: 5px" href=`${base_url}/`>
                     <img style="filter: invert(1);" width="30px" height="30px" src="./assets/brand/favicon.ico" alt="WoodBox Logo" />
                     <strong>WoodBox</strong>
                 </a>
