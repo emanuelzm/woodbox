@@ -1,60 +1,14 @@
 ---
 import Header from '../components/header/Header.astro';
-import Footer from '../components/footer/Footer.astro';
 import Layout from '../layouts/Layout.astro';
 import "../styles/contact.css";
-
-const products = [
-    {
-        name: "",
-        description: "",
-        images: ["https://t4.ftcdn.net/jpg/05/47/74/67/360_F_547746791_AaOMo0yf5FNpns8PZ09Idmvo9KKIHqr4.webp", "https://t4.ftcdn.net/jpg/02/91/24/27/360_F_291242770_z3XC7rJB1Mvc5jVMsEY9Dx2xMrX4sxUi.jpg"],
-        link: "",
-        promotion: null
-    },
-    {
-        name: "",
-        description: "",
-        images: ["https://t4.ftcdn.net/jpg/05/47/74/67/360_F_547746791_AaOMo0yf5FNpns8PZ09Idmvo9KKIHqr4.webp"],
-        link: "",
-        promotion: "50%"
-    },
-    {
-        name: "",
-        description: "",
-        images: [],
-        link: "",
-        promotion: null
-    },
-    {
-        name: "",
-        description: "",
-        images: [],
-        link: "",
-        promotion: null
-    },
-    {
-        name: "",
-        description: "",
-        images: [],
-        link: "",
-        promotion: null
-    },
-    {
-        name: "",
-        description: "",
-        images: [],
-        link: "",
-        promotion: "20%"
-    },
-];
+import '../../api/products.js';
 ---
 
 <Layout 
     title="WoodBox: Sobre nosotros" 
     description=""
 >
-    <Header />
     <main>
         <div style="max-width: 1000px; margin: 0 auto;" class="uk-align-center uk-border-rounded uk-card uk-card-default uk-card-body">
             <h1>Productos de la empresa</h1>
@@ -63,7 +17,6 @@ const products = [
             </div>
         </div>    
     </main>
-    <Footer />
     <script is:inline define:vars={{ products }}>
         products.forEach((product) => {
             const article = document.createRange().createContextualFragment(/*html*/ `

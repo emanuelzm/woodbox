@@ -1,6 +1,5 @@
 ---
 import Header from '../components/header/Header.astro';
-import Footer from '../components/footer/Footer.astro';
 import Layout from '../layouts/Layout.astro';
 import "../styles/contact.css";
 
@@ -36,7 +35,6 @@ const team = [
     title="Equipo de WoodBox"
     description=""
 >
-    <Header />
     <main>
         <div style="max-width: 1000px; margin: 0 auto;" class="uk-child-width-expand@s uk-background-default uk-box-shadow-small uk-border-rounded uk-card uk-padding">
             <h1>Equipo de WoodBox</h1>
@@ -45,7 +43,6 @@ const team = [
             </div>
         </div>
     </main>
-    <Footer />
     <script is:inline define:vars={{ team }}>
         team.forEach((person) => {
             const article = document.createRange().createContextualFragment(/*html*/ `

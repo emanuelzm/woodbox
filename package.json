@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/emanuelzm/woodbox/issues"
   },
-  "homepage": "https://github.com/emanuelzm/woodbox#readme"
+  "homepage": "https://github.com/emanuelzm/woodbox#readme",
+  "devDependencies": {
+    "@types/node": "^20.1.4"
+  }
 }
