@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import "../styles/contact.css";
+import brand from "../api/brand.json";
+
+const links = [
+    { name: "Equipo", link: "./team" },
+    { name: "Sobre nosotros", link: "./about" },
+    { name: "Contacto", link: "./contact" },
+    { name: "Terminos y Condiciones", link: "./terms" },
+    { name: "Politica de Privacidad", link: "./privacy-policy" },
+];
+
+---
+
+<Layout 
+    title="WoodBox: Nosotros" 
+    description=""
+>
+    <main>
+        <div style="max-width: 1000px; margin: 0 auto;" class="uk-align-center uk-border-rounded uk-card uk-card-default uk-card-body">
+            <h1 class="uk-flex-inline uk-flex-middle" style="font-weight: bold; font-size: xx-large; margin-bottom: 10px;"><img src="./assets/brand/favicon.ico" width="55px" height="55px" alt="">Nosotros</h1>
+            <p class="uk-margin">
+                Somos una empresa dedicada a la fabricación de muebles de madera, 
+                con más de 10 años de experiencia en el mercado. 
+                Nuestro objetivo es brindarle a nuestros clientes productos de calidad, 
+                con diseños innovadores y a precios accesibles.
+            </p>
+            <div style="display: flex; gap: 10px; flex-flow: wrap;">
+                {
+                    links.map((item) => (
+                        <div style="border: 1px solid #1e87f050; position: relative; max-width: fit-content; padding: 10px; height: 100%;" class="uk-border-rounded uk-card uk-card-default uk-card-small uk-card-body">
+                            <p style="margin: 0;">{item.name} <span style="color: #1e87f0">&gt</span></p>
+                            <a style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; cursor: pointer;" href={item.link}></a>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>    
+    </main>
+</Layout>

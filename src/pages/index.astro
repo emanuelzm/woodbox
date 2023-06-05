@@ -1,126 +1,25 @@
 ---
-import Header from '../components/header/Header.astro';
-import Footer from '../components/footer/Footer.astro';
 import Layout from '../layouts/Layout.astro';
-
-const phrase = "Guarda tus tesoros con estilo y funcionalidad, mientras añades un toque de encanto.";
-const base_url = "https://www.woodboxes.co";
+import brand from "../api/brand.json";
+import ProductSlider from '../components/product-slider.astro';
+import GoToSocial from '../components/goToSocial.astro';
+import Newsletter from '../components/newsletter.astro';
 ---
 
 <Layout 
-	title="Woodbox: Custom Works"
-	description=`Woodbox: ${phrase}`
+	title={brand[0].name}
+	description={brand[0].description}
 >
 
 	<main>
-		<Header />
 		<div class="uk-flex-column uk-margin uk-border-rounded uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="https://images.unsplash.com/photo-1490822180406-880c226c150b?fit=crop&w=650&h=433&q=80" uk-img>
-			<h1>WoodBox: Custom Works</h1>
-			<p>{phrase}</p>
-		</div>
-		<div class="uk-margin">
-			<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-				<div class="uk-card-media-left uk-cover-container">
-					<img src="./assets/brand/logo.png" alt="">
-				</div>
-				<div>
-					<div class="uk-card-body">
-						<h3 class="uk-card-title">Media Left</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="uk-margin">
-			<div class="uk-slider-container-offset" uk-slider="finite: false, set: false;">
-
-				<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
-			
-					<ul class="uk-slider-items uk-child-width-1-2@s uk-grid">
-						<li>
-							<div class="uk-card uk-card-default">
-								<div class="uk-card-media-top">
-									<img src="./assets/brand/logo.png" width="1800" height="1200" alt="">
-								</div>
-								<div class="uk-card-body">
-									<h3 class="uk-card-title">Headline 1</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="uk-card uk-card-default">
-								<div class="uk-card-media-top">
-									<img src="./assets/brand/logo.png" width="1800" height="1200" alt="">
-								</div>
-								<div class="uk-card-body">
-									<h3 class="uk-card-title">Headline 2</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="uk-card uk-card-default">
-								<div class="uk-card-media-top">
-									<img src="./assets/brand/logo.png" width="1800" height="1200" alt="">
-								</div>
-								<div class="uk-card-body">
-									<h3 class="uk-card-title">Headline 3</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="uk-card uk-border-rounded uk-card-default" style="border: 1px solid #111; position: relative; height: 100%;">
-								<a href=`${base_url}/products` style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; cursor: pointer;">
-									<div class="uk-flex uk-flex-middle uk-card-body uk-flex-column" style="height: 100%; justify-content: center;">
-										<h3 class="uk-card-title">Mirar más</h3>
-									</div>
-								</a>
-							</div>
-						</li>
-					</ul>
-			
-					<a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-					<a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
-			
-				</div>
-			
-				<ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
-			
-			</div>
-		</div>
-		<div class="uk-margin">
-			<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-				<div class="uk-card-media-left uk-cover-container">
-					<img src="./assets/brand/logo.png" alt="">
-				</div>
-				<div>
-					<div class="uk-card-body">
-						<h3 class="uk-card-title">Media Left</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div style="border: 1px solid #111" class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-			<div class="uk-flex-last@s uk-card-media-right uk-cover-container">
-				<img src="./assets/newsletter.jpg" style="height: 100%; object-fit:cover;" alt="Newsletter WoodBox">
-			</div>
-			<div>
-				<div class="uk-card-body">
-					<h3 class="uk-card-title">Nuestro Newsletter:</h3>
-					<form method="POST" action="#" id="formV1">
-						<label for="form_email">Danos tu correo: </label><input id="form_email" style="border: 1px solid #111;" class="uk-input uk-form-blank uk-form-width-medium" type="email" placeholder="john.doe@gmail.com" required>
-						<div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
-							<label><input class="uk-checkbox" type="checkbox" required> Acepto terminos y condiciones</label>
-						</div>
-						<button class="uk-button uk-button-default">Suscribirme</button>
-					</form>
-				</div>
-			</div>
+			<h1 style="font-weight: bold; font-size: xx-large; gap: 10px;" class="uk-flex-inline uk-flex-middle">
+				<img src="./assets/brand/favicon.ico" style="filter: invert(1);" alt={brand[0].name} width="40px" height="40px">{brand[0].name}
+			</h1>
+			<p>{brand[0].description}</p>
 		</div>		
+		<ProductSlider />
+		<GoToSocial />
+		<Newsletter />
 	</main>
-	<script src="/assets/js/newsletter.js" is:inline></script>
-	<Footer />
 </Layout>

@@ -4,6 +4,8 @@ export interface Props {
 	description: string;
 }
 
+import Header from '../components/header/Header.astro';
+import Footer from '../components/footer/Footer.astro';
 import Seo from '../components/seo/Seo.astro';
 import "../styles/globals.css";
 const { title, description } = Astro.props;
@@ -18,7 +20,7 @@ import "../components/uikit/css/uikit-rtl.min.css";
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/x-icon" href="/assets/brand/favicon.ico" />
+		<link rel="icon" type="image/x-icon" href="https://www.woodboxes.co/assets/brand/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,8 +41,9 @@ import "../components/uikit/css/uikit-rtl.min.css";
 		<title>{title}</title>
 	</head>
 	<body>
+		<Header />
 		<slot />
-
+		<Footer />
 		<script src="../components/uikit/js/uikit.js"></script>
 		<script src="../components/uikit/js/uikit-icons.js"></script>
 	</body>

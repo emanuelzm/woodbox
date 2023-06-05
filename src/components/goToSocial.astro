@@ -1,0 +1,19 @@
+---
+import brand from '../api/brand.json';
+const social = brand[0].social[0];
+---
+
+<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+    <div class="uk-card-media-left uk-cover-container">
+        <img src={social.image} alt="">
+    </div>
+    <div>
+        <div class="uk-card-body" style="height: 100%;">
+            <h3 class="uk-card-title uk-margin-top">
+                {social.title}
+            </h3>
+            <p class="uk-margin-top">{social.description}</p>
+            <a class="uk-button uk-button-primary uk-margin-top" style="border-radius: 5px;" href={social.url}>Visit &gt;</a>
+        </div>
+    </div>
+</div>

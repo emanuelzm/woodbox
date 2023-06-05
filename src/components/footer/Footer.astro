@@ -1,11 +1,10 @@
 ---
-export interface Props {
-}
+import brand from '../../api/brand.json';
 //const { } = Astro.props;
 ---
 
 <footer>
-    2023 © Woodbox LLC
+    2023 © {brand[0].name} LLC
 </footer>
 
 <style>
@@ -17,6 +16,7 @@ export interface Props {
         text-align: center;
         font-weight: 600;
         color: #666;
+        height: 40px;
     }
 
 </style>
