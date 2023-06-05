@@ -18,7 +18,8 @@
         ],
         "other": [
             {
-                "arduino": "https://github.com/ElCableAmarillo/Listado-de-practicas/tree/master/Salidas-anal%C3%B3gicas/Movimiento-de-un-servomotor?_ga=2.164145847.944220521.1681922615-1567049568.1681922615"
+                "arduino": "https://github.com/ElCableAmarillo/Listado-de-practicas/tree/master/Salidas-anal%C3%B3gicas/Movimiento-de-un-servomotor?_ga=2.164145847.944220521.1681922615-1567049568.1681922615",
+                "FlowForTailwind": "https://flowbite.com/docs/getting-started/introduction/"
             }
         ]
     }
