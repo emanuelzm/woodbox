@@ -2,9 +2,19 @@
     {
         "name": "WoodBox: Custom Works",
         "description": "Woodbox: Guarda tus tesoros con estilo y funcionalidad, mientras añades un toque de encanto.",
-        "base_url": "https://woodboxes.co",
+        "base_url": "http://127.0.0.1:3000",
+        "base_url_": "https://woodboxes.co",
         "mision": "Promover un ambiente divertido y seguro donde cada uno de los clientes disfruten de las manualidades realizadas por nosotros mismos con excelente calidad y precios accesibles. Queremos que nuestros clientes guarden sus tesoros con estilo y funcionalidad. De tal forma que está sea la mejor opción y que las personas no duden en ir a su negocio.",
         "vision": "La visón de Woodbox es 'ser el lugar y la forma de satisfacción de sus clientes', lo que obliga a nosotros como empresarios a dirigir esfuerzos y recursos para alcanzar grandes propósitos como marca.",
-        "valores": ["Responsabilidad", "Respeto", "Calidad", "Cooperación", "Escucha", "Puntualidad"]
+        "valores": ["Responsabilidad", "Respeto", "Calidad", "Cooperación", "Escucha", "Puntualidad"],
+        "social": [
+            {
+                "title": "Siguenos en Instagram",
+                "description": "Woodbox: guarda tus tesoros con estilo y funcionalidad, mientras añades un toque de encanto.",
+                "image": "https://woodboxes.co/assets/brand/logo.jpg",
+                "logoApp": "https://img.icons8.com/ios-glyphs/30/null/instagram-new.png",
+                "url": "https://www.instagram.com/woodbox_co"
+            }
+        ]
     }
 ]

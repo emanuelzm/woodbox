@@ -1,8 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import brand from "../api/brand.json";
-import Newsletter from '../components/newsletter.astro';
 import ProductSlider from '../components/product-slider.astro';
+import GoToSocial from '../components/goToSocial.astro';
+import Newsletter from '../components/newsletter.astro';
 ---
 
 <Layout 
@@ -18,6 +19,7 @@ import ProductSlider from '../components/product-slider.astro';
 			<p>{brand[0].description}</p>
 		</div>		
 		<ProductSlider />
+		<GoToSocial />
 		<Newsletter />
 	</main>
 </Layout>

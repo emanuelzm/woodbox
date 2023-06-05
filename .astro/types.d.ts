@@ -1,5 +1,15 @@
 declare module 'astro:content' {
 	interface Render {
+		'.mdx': Promise<{
+			Content: import('astro').MarkdownInstance<{}>['Content'];
+			headings: import('astro').MarkdownHeading[];
+			remarkPluginFrontmatter: Record<string, any>;
+		}>;
+	}
+}
+
+declare module 'astro:content' {
+	interface Render {
 		'.md': Promise<{
 			Content: import('astro').MarkdownInstance<{}>['Content'];
 			headings: import('astro').MarkdownHeading[];
@@ -188,7 +198,44 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		
+		"products": {
+"extra1531513.mdx": {
+	id: "extra1531513.mdx";
+  slug: "extra1531513";
+  body: string;
+  collection: "products";
+  data: any
+} & { render(): Render[".mdx"] };
+"woodbox-big-nature.mdx": {
+	id: "woodbox-big-nature.mdx";
+  slug: "woodbox-big-nature";
+  body: string;
+  collection: "products";
+  data: any
+} & { render(): Render[".mdx"] };
+"woodbox-custom.mdx": {
+	id: "woodbox-custom.mdx";
+  slug: "woodbox-custom";
+  body: string;
+  collection: "products";
+  data: any
+} & { render(): Render[".mdx"] };
+"woodbox-medium-nature.mdx": {
+	id: "woodbox-medium-nature.mdx";
+  slug: "woodbox-medium-nature";
+  body: string;
+  collection: "products";
+  data: any
+} & { render(): Render[".mdx"] };
+"woodbox-small-nature.mdx": {
+	id: "woodbox-small-nature.mdx";
+  slug: "woodbox-small-nature";
+  body: string;
+  collection: "products";
+  data: any
+} & { render(): Render[".mdx"] };
+};
+
 	};
 
 	type DataEntryMap = {

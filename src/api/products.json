@@ -1,30 +1,38 @@
 [
     {
+        "id": 1,
         "name": "WoodBox Small Nature",
         "description": "Es una caja personalizada tematizada sobre la naturaleza.",
         "images": ["https://t4.ftcdn.net/jpg/05/47/74/67/360_F_547746791_AaOMo0yf5FNpns8PZ09Idmvo9KKIHqr4.webp", "https://t4.ftcdn.net/jpg/02/91/24/27/360_F_291242770_z3XC7rJB1Mvc5jVMsEY9Dx2xMrX4sxUi.jpg"],
         "link": "woodbox-small-nature",
-        "promotion": null
+        "promotion": null,
+        "price": 0
     },
     {
+        "id": 2,
         "name": "WoodBox Medium Nature",
         "description": "En un tamaño medio incluye la escencia de la flora y fauna de la Naturaleza.",
         "images": ["https://t4.ftcdn.net/jpg/05/47/74/67/360_F_547746791_AaOMo0yf5FNpns8PZ09Idmvo9KKIHqr4.webp"],
         "link": "woodbox-medium-nature",
-        "promotion": "POPULAR"
+        "promotion": "POPULAR",
+        "price": 0
     },
     {
+        "id": 3,
         "name": "WoodBox Big Nature",
         "description": "En una caja grande podras encontrar un diseño especial con tematica del oceano.",
         "images": ["https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8="],
         "link": "woodbox-big-nature",
-        "promotion": null
+        "promotion": null,
+        "price": 0
     },
     {
+        "id": 4,
         "name": "WoodBox: Custom work",
         "description": "En una caja personalizada, tu podras diseñar la tematica de la caja.",
-        "images": [],
+        "images": ["https://eldiariodelaeducacion.com/ecoescuela-abierta/wp-content/uploads/sites/18/2019/03/bosque-pixabay.jpg"],
         "link": "woodbox-custom",
-        "promotion": "10%"
+        "promotion": "10%",
+        "price": 0
     }
 ]

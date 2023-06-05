@@ -1,0 +1,89 @@
+---
+---
+import brand from "../../api/brand.json";
+import products from "../../api/products.json";
+
+export const { id, name, description, images, link, promotion, price } = products[3];
+
+<main>
+<section>
+  <div class="relative mx-auto max-w-screen-xl px-4 py-8">
+    <div>
+      <h1 class="text-2xl font-bold lg:text-3xl">{name}</h1>
+
+      <p class="mt-1 text-sm text-gray-500">SKU: {id}</p>
+    </div>
+
+    <div class="grid gap-8 lg:grid-cols-4 lg:items-start">
+      <div class="lg:col-span-3">
+        <div class="relative mt-4">
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
+                <ul class="uk-slideshow-items">
+                    {images.map((image, index) => (
+                        <li>
+                            <img
+                                src={image || "https://woodboxes.co/assets/brand/logo.jpg"}
+                                alt={name}
+                                class="w-full h-full object-center object-cover"
+                            />                
+                        </li>
+                    ))}
+                </ul>
+                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+            </div>
+        </div>
+      </div>
+
+      <div class="lg:sticky lg:top-0">
+        <form class="space-y-4 lg:pt-8">
+          <fieldset>
+            <legend class="text-lg font-bold">Material</legend>
+
+            <div class="mt-2 flex flex-wrap gap-1">
+              <label for="material_cotton" class="cursor-pointer">
+                <input
+                  type="radio"
+                  id="material_cotton"
+                  name="material"
+                  class="peer sr-only"
+                  checked
+                />
+
+                <span
+                  class="block rounded-full border border-gray-200 px-3 py-1 text-xs peer-checked:bg-gray-100"
+                >
+                  Wood
+                </span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="rounded border bg-gray-100 p-4">
+            <p class="text-sm">
+              <span class="block">Descuento: {promotion ? promotion : "No."}</span>
+            </p>
+          </div>
+
+          <div>
+            <p class="text-xl font-bold">{price}</p>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full rounded bg-red-700 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white"
+          >
+            Add to cart
+          </button>
+        </form>
+      </div>
+
+      <div class="lg:col-span-3">
+        <div class="prose max-w-none">
+          <p>{description}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
