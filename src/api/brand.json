@@ -15,6 +15,11 @@
                 "logoApp": "https://img.icons8.com/ios-glyphs/30/null/instagram-new.png",
                 "url": "https://www.instagram.com/woodbox_co"
             }
+        ],
+        "other": [
+            {
+                "arduino": "https://github.com/ElCableAmarillo/Listado-de-practicas/tree/master/Salidas-anal%C3%B3gicas/Movimiento-de-un-servomotor?_ga=2.164145847.944220521.1681922615-1567049568.1681922615"
+            }
         ]
     }
 ]

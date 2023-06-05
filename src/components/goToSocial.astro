@@ -5,6 +5,7 @@ const social = brand[0].social[0];
 
 <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
     <div class="uk-card-media-left uk-cover-container">
+        {social.promotion ? `<div class="uk-card-badge uk-label">${social.promotion}</div>` : ""}
         <img src={social.image} alt="">
     </div>
     <div>
